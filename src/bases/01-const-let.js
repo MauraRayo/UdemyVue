@@ -1,5 +1,3 @@
-
-
 const nombre   = 'Tony'
 const apellido = 'Stark'
 

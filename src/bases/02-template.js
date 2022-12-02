@@ -1,5 +1,3 @@
-
-
 const nombre = 'Fernando'
 const apellido = 'Herrera'
 
