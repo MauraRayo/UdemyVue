@@ -1,22 +1,25 @@
- 
-import axios from 'axios';
+// Una función asíncrona retorna una promesa por defecto 
+// y el await solo puede ser utilizado dentro de una funcion asíncrona
 
-const apiKey = '2krqXQCiA0ARSEt3vldIQz5glQa8qdQ1'
-//fetch(`https://api.giphy.com/v1/gifs/random?api_key=${ apiKey }`)
-
-const gitphyApi = axios.create({
-baseURL: 'https://api.giphy.com/v1/gifs',
-params: {
-    api_key: apiKey
+const miPromesa = () => {
+  return new Promise ( resolve =>{
+    setTimeout(() =>{
+         resolve('Tenemos un valor en la promesa')
+    }, 1000);
+  })
 }
 
 
-})
-
-gitphyApi.get('/random')
-.then(resp => {
-    console.log(resp.data)
-})
+const medirTiempoAsync = async() => {
+  console.log('Inicio')
+    // await miPromesa()
+  console.log('Fin')
 
 
+  throw 'Error en medirTiempoAsync'
+}
 
+medirTiempoAsync()
+    .then( valor => console.log( valor ) )
+    .catch( err => console.log( 'error : ',  err ))
+// en valor es el return de async
