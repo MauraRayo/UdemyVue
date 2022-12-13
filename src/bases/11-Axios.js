@@ -13,6 +13,9 @@ params: {
 
 })
 
+export default gitphyApi
+
+
 gitphyApi.get('/random')
 .then(resp => {
 
