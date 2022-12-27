@@ -9,8 +9,6 @@ baseURL: 'https://api.giphy.com/v1/gifs',
 params: {
     api_key: apiKey
 }
-
-
 })
 
 export default gitphyApi
